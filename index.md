@@ -1,7 +1,7 @@
 # My Cool Stuff
 
 ## Demos
-- [thing 1](the-folder)
+- [Project 2](Project 2)
 
 ## Projects
 - other things
