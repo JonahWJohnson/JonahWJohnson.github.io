@@ -1,5 +1,5 @@
-// Project Title
-// Your Name
+// Arrays && Object Notation
+// Jonah Johnson
 // Date
 //
 // Extra for Experts:
