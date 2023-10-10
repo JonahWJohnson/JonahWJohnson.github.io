@@ -5,4 +5,4 @@
 
 ## Projects
 - other things
-- [Project 2](Arrays-Objects)
+- [Arrays and Object Notations Assignment](Arrays-Objects)
