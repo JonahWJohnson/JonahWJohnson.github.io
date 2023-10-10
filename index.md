@@ -5,4 +5,4 @@
 
 ## Projects
 - other things
-- [Project 2](Project2)
+- [Project 2](Arrays-Objects)
