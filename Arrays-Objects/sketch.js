@@ -25,9 +25,17 @@ function setup() {
 
 function draw() {
   background(220);
+  moveJef()
 }
 
 
 function moveJef() {
 // base movement 
+if (keyIsDown(68)) {
+  jef.x += jef.dx
+}
+}
+
+function spawnJef(){
+  square
 }
