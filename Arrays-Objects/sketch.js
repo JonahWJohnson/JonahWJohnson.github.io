@@ -70,7 +70,8 @@ function collision() {
     isGrounded === false;
   }
 
-  if (jef.y >= height + jef.size/2) {
+  //keeps jef from falling through ground
+  if () {
     jef.y = height - jef.size;
   }
 }
