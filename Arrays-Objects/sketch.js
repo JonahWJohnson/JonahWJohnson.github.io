@@ -12,6 +12,7 @@ let jef = {
   dy: 0,
   size: 50,
   weight: 5,
+  jumpStrength: -5,
 }
 let isGrounded;
 let gravityProperties = {
@@ -28,8 +29,7 @@ function draw() {
   background(220);
   spawnJef();
   moveJef();
-  collision();
-  centerJef()
+  centerJef();
 }
 
 
@@ -59,7 +59,8 @@ jef.y += jef.dy
 }
 
 function spawnJef(){
-  square(jef.x, jef.y, jef.size)
+  square(jef.x, jef.y, jef.size);
+  collision();
 }
 
 function collision() {
@@ -71,8 +72,9 @@ function collision() {
   }
 
   //keeps jef from falling through ground
-  if () {
+  if (jef.y + jef.size > height) {
     jef.y = height - jef.size;
+    jef.dy = 0;
   }
 }
 
@@ -80,15 +82,16 @@ function jump() {
   // Checks if character is grounded
   if (jef.y + jef.size === height) {
     //adds jumpStrength to vertical velocitty
-    jef.dy = jumpStrength;
+    jef.dy += jumpStrength;
   }
 }
 
 function centerJef() {
+  //c
   if (keyIsDown(67)) {
     jef.x = width/2;
     jef.y = height/2;
     jef.dy = 0
-    jef.dx = 0
+    jef.dx = 5
   }
-}c
+}
