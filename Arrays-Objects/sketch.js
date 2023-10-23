@@ -69,17 +69,14 @@ function spawnJef(){
 }
 
 function collision() {
-  if (!(jef.y + jef.size === height)) {
-    isInAir = true;
-  }
-  else {
+  // checks if the character is on the ground
+  if (jef.y + jef.size >= height) {
+    //keeps character from falling through ground
     isInAir = false;
-  }
-
-  //keeps jef from falling through ground
-  if (jef.y + jef.size > height) {
     jef.y = height - jef.size;
     jef.dy = 0;
+  } else {
+    isInAir = true;
   }
 }
 
