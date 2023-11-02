@@ -16,25 +16,28 @@ let bMan = {
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(400, 400);
   if (height > width) {
-    cellSize = width/GRID_SIZE;
+    cellSize = width/gridSize;
   }
   else {
-    cellSize = height/GRID_SIZE;
+    cellSize = height/gridSize;
   }
 }
 
 function draw() {
   background(220);
   displayGrid();
+  displayCharacter();
 }
 
 
 function displayGrid() {
   for (let y = 0; gridSize; y++) {
+    fill(0)
     for (let x = 0; gridSize; x++) {
       rect(x * cellSize, y * cellSize, cellSize, cellSize)
+      fill(255)
     }
   }
 }
