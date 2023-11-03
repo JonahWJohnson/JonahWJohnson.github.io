@@ -7,7 +7,7 @@
 
 let grid;
 let cellSize;
-let gridSize = 11;
+const gridSize = 11;
 let bMan = {
   x,
   y,
@@ -28,16 +28,14 @@ function setup() {
 function draw() {
   background(220);
   displayGrid();
-  displayCharacter();
+  //displayCharacter();
 }
-
 
 function displayGrid() {
   for (let y = 0; gridSize; y++) {
-    fill(0)
     for (let x = 0; gridSize; x++) {
+      fill("black")
       rect(x * cellSize, y * cellSize, cellSize, cellSize)
-      fill(255)
     }
   }
 }
