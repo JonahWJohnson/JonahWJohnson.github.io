@@ -7,7 +7,7 @@
 
 let grid;
 let cellSize;
-const gridSize = 11;
+const gridSize = 5;
 let bMan = {
   x,
   y,
