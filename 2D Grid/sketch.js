@@ -5,9 +5,12 @@
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
 
+let tiles;
+let tilesHigh, tileswide;
+let tileWidth, tileHeight;
+let hardwall, softWall
 let grid;
 let cellSize;
-const gridSize = 5;
 let bMan = {
   x,
   y,
@@ -32,10 +35,11 @@ function draw() {
 }
 
 function displayGrid() {
-  for (let y = 0; gridSize; y++) {
-    for (let x = 0; gridSize; x++) {
-      fill("black")
-      rect(x * cellSize, y * cellSize, cellSize, cellSize)
+  image(levelBackground, 0, 0, width, height);
+
+  for (let y = 0; y < tilesHigh; y++) {
+    for (let x = 0; x < tilesWide; x++) {
+      showTile(tiles[y][x], x, y);
     }
   }
 }
