@@ -10,7 +10,7 @@ let tilesHigh, tileswide;
 let tileWidth, tileHeight;
 let hardwall, softWall
 let grid;
-let cellSize;
+let levelBackground
 let bMan = {
   x,
   y,
