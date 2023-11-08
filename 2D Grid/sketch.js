@@ -28,6 +28,7 @@ function preload() {
   //load tile images
   softWall = loadImage("assets/images/softWall.png");
   hardWall = loadImage("assets/images/hardWall.png");
+  bomberMan = loadImage("assets/images/bMan.png")
   empty = loadImage("assets/images/empty.png");
 }
 
@@ -69,8 +70,12 @@ function showTile(location, x, y) {
   if (location === "#") {
     image(hardWall, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
   }
-  else if (location === "B") {
+  else if (location === "*") {
     image(softWall, x * tileWidth, y * tileHeight, tileWidth, tileHeight)
+  }
+
+  else if (location === "B") {
+    image(bomberMan, x * tileWidth, y * tileHeight, tileWidth, tileHeight)
   }
   else {
     image(empty, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
