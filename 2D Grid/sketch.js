@@ -5,6 +5,7 @@
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
 
+let p;
 let tiles;
 let tilesHigh, tilesWide;
 let tileWidth, tileHeight;
@@ -13,8 +14,8 @@ let mapBackground;
 let mapToLoad;
 let lines;
 let bMan = {
-  x,
-  y,
+  x : 0,
+  y : 0,
 }
 
 function preload() {
@@ -29,6 +30,7 @@ function preload() {
   softWall = loadImage("assets/images/softWall.png");
   hardWall = loadImage("assets/images/hardWall.png");
   bomberMan = loadImage("assets/images/bMan.png")
+  bomb = loadImage("assets/images/bomb.png")
   empty = loadImage("assets/images/empty.png");
 }
 
@@ -71,11 +73,18 @@ function showTile(location, x, y) {
     image(hardWall, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
   }
   else if (location === "*") {
-    image(softWall, x * tileWidth, y * tileHeight, tileWidth, tileHeight)
+    image(softWall, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
   }
 
+  else if (location === "M") {
+    image(bomberMan, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
+
+    p = location;
+    return p;
+  }
   else if (location === "B") {
-    image(bomberMan, x * tileWidth, y * tileHeight, tileWidth, tileHeight)
+    image(bomb, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
+    
   }
   else {
     image(empty, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
