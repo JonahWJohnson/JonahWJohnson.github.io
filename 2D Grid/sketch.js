@@ -68,8 +68,11 @@ function showTile(location, x, y) {
   if (location === "#") {
     image(hardWall, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
   }
-  else (location === ".") {
-    image(empty)
+  else if (location === "B") {
+    image(softWall, x * tileWidth, y * tileHeight, tileWidth, tileHeight)
+  }
+  else {
+    image(empty, x * tileWidth, y * tileHeight, tileWidth, tileHeight);
   }
 }
 
