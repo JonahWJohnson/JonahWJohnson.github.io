@@ -28,6 +28,7 @@ function preload() {
   //load tile images
   softWall = loadImage("assets/images/softWall.png");
   hardWall = loadImage("assets/images/hardWall.png");
+  empty = loadImage("assets/images/empty.png");
 }
 
 function setup() {
