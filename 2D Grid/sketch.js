@@ -101,3 +101,7 @@ function createEmpty2dArray(cols, rows) {
   }
   return randomGrid;
 }
+
+function checkInputs {
+  if 
+}
