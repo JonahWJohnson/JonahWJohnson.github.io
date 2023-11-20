@@ -5,6 +5,7 @@
 - [Perlin Noise Ball](noise-ball)
 - [walker oop demo](walker-oop)
 - [prelin connected oop balls](oop-perlin)
+- [fire works dem0](fire-works)
 
 ## Projects
 - other things
